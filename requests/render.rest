@@ -1,0 +1,28 @@
+GET https://fullstackopen-ex-b.onrender.com
+
+###
+GET https://fullstackopen-ex-b.onrender.com/api/persons/
+
+###
+GET https://fullstackopen-ex-b.onrender.com/info/
+
+###
+GET  https://fullstackopen-ex-b.onrender.com/api/persons/1
+
+###
+GET  https://fullstackopen-ex-b.onrender.com/api/persons/5
+
+###
+DELETE https://fullstackopen-ex-b.onrender.com/api/persons/3
+
+###
+POST https://fullstackopen-ex-b.onrender.com/api/persons/
+content-type: application/json
+
+{
+    "name":"wes",
+    "number": 21
+}
+
+###
+GET https://fullstackopen-ex-b.onrender.com/api/persona/5
