@@ -119,7 +119,7 @@ app.post("/api/persons", (request, response) => {
 
     persons = persons.concat(person);
 
-    response.json(persons);
+    response.json(person);
 });
 
 app.use(unknownEndpoint);
