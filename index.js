@@ -88,12 +88,12 @@ app.get("/api/persons/:id", (request, response) => {
         });
 });
 
-app.delete("/api/persons/:id", (request, response) => {
-    const id = Number(request.params.id);
-    persons = persons.filter((person) => person.id !== id);
+// app.delete("/api/persons/:id", (request, response) => {
+//     const id = Number(request.params.id);
+//     persons = persons.filter((person) => person.id !== id);
 
-    response.status(204).end();
-});
+//     response.status(204).end();
+// });
 
 app.post("/api/persons", (request, response) => {
     const body = request.body;
@@ -104,23 +104,21 @@ app.post("/api/persons", (request, response) => {
         });
     }
 
-    // Check if the name is already in the persons array
-    const nameExists = persons.some((person) => person.name === body.name);
+    // const nameExists = persons.some((person) => person.name === body.name);
 
-    if (nameExists) {
-        return response.status(409).json({
-            error: "name must be unique",
-        });
-    }
+    // if (nameExists) {
+    //     return response.status(409).json({
+    //         error: "name must be unique",
+    //     });
+    // }
 
-    const person = {
+    const person = new Person({
         name: body.name,
         number: body.number,
-    };
-
-    persons = persons.concat(person);
-
-    response.json(person);
+    });
+    person.save().then((savedPerson) => {
+        response.json(savedPerson);
+    });
 });
 
 app.use(unknownEndpoint);
