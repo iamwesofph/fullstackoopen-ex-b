@@ -34,6 +34,7 @@ if (len === 3) {
         name: name,
         number: number,
     });
+    // eslint-disable-next-line no-unused-vars
     person.save().then((result) => {
         console.log("New person added");
         mongoose.connection.close();
