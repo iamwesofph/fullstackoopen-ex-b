@@ -23,8 +23,9 @@ content-type: application/json
 
 ###
 PUT http://localhost:3001/api/persons/64d63c45e3583a8cc2dd1ba8
+content-type: application/json
 
 {
-    "name":"Artotoy",
-    "number": 212
+    "name":"Arto Hellas",
+    "number": 218
 }
