@@ -7,7 +7,7 @@ GET http://localhost:3001/info/
 GET  http://localhost:3001/api/persons/1
 
 ###
-GET  http://localhost:3001/api/persons/5
+GET  http://localhost:3001/api/persons/64d63c45e3583a8cc2dd1ba8
 
 ###
 DELETE http://localhost:3001/api/persons/64d63c1eb5a442d2a637326f
@@ -22,4 +22,9 @@ content-type: application/json
 }
 
 ###
-GET http://localhost:3001/api/persona/5
+PUT http://localhost:3001/api/persons/64d63c45e3583a8cc2dd1ba8
+
+{
+    "name":"Artotoy",
+    "number": 212
+}
